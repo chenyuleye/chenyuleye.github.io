@@ -1,58 +1,113 @@
+
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+<meta charset="utf-8" >
+
 <title>英国站出第一单 | chenyuleye</title>
-<link rel="shortcut icon" href="https://www.chenyuleye.com/favicon.ico?v=1597830521957">
+<meta name="description" content="往往都是0-1比较难走，当到1之后就会越来越顺">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://www.chenyuleye.com/favicon.ico?v=1597831796772">
 <link rel="stylesheet" href="https://www.chenyuleye.com/styles/main.css">
 
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
 
 
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://www.chenyuleye.com">
-  <img class="avatar" src="https://www.chenyuleye.com/images/avatar.png?v=1597830521957" alt="">
-  </a>
-  <h1 class="site-title">
-    chenyuleye
-  </h1>
-  <p class="site-description">
-    往往都是0-1比较难走，当到1之后就会越来越顺
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          归档
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
-      
-        <a href="https://www.chenyuleye.com/post/wo-you-dian-sha" class="menu">
-          分类
-        </a>
-      
-    
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://www.chenyuleye.com">
+        <img class="avatar" src="https://www.chenyuleye.com/images/avatar.png?v=1597831796772" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://www.chenyuleye.com">
+        <h1 class="site-title">chenyuleye</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
   </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+        
+          <a href="https://www.chenyuleye.com/post/wo-you-dian-sha" class="menu purple-link">
+            分类
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+            <div class="feature-container" style="background-image: url('https://www.chenyuleye.com/post-images/ying-guo-zhan-chu-di-yi-dan.jpeg')">
+            </div>
+          
+          <h2 class="post-title">英国站出第一单</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2020-08-19</span>
+            
+          </div>
+          <div class="post-content">
+            <p>2020.8.18 英国站卖出了第一单，开心😀😀😀，然后想来占个地儿，加班给忘了，现在来标一下，顺带看下后台，又一单，第二单，🤓，幸福来的太突然了。。</p>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://www.chenyuleye.com/post/ri-chang-zhou-mo/">
+              <h3 class="post-title">
+                下一篇：日常周末
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan">往往都是0-1比较难走，当到1之后就会越来越顺</div>
   <div class="social-container">
     
       
@@ -66,53 +121,26 @@
       
     
   </div>
-</div>
-
-      
-        <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              英国站出第一单
-            </h2>
-            <div class="post-info">
-              <time class="post-time">
-                · 2020-08-19 ·
-              </time>
-              
-            </div>
-            
-              <div class="post-feature-image" style="background-image: url('https://www.chenyuleye.com/post-images/ying-guo-zhan-chu-di-yi-dan.jpeg')">
-              </div>
-            
-            <div class="post-content">
-              <p>2020.8.18 英国站卖出了第一单，开心😀😀😀，然后想来占个地儿，加班给忘了，现在来标一下，顺带看下后台，又一单，第二单，🤓，幸福来的太突然了。。</p>
-
-            </div>
-          </article>
-        </div>
-    
-        
-          <div class="next-post">
-            <div class="next">下一篇</div>
-            <a href="https://www.chenyuleye.com/post/ri-chang-zhou-mo/">
-              <h3 class="post-title">
-                日常周末
-              </h3>
-            </a>
-          </div>  
-        
-
-        
-    
-        <div class="site-footer">
   Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
 </div>
 
-<script>
-  hljs.initHighlightingOnLoad()
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
 </script>
 
-      </div>
-    </div>
+
+
+
   </body>
 </html>
