@@ -1,18 +1,15 @@
-
 <!DOCTYPE html>
 <html>
   <head>
-    
-<meta charset="utf-8" >
+    <meta charset="utf-8" >
 
 <title>新屋造旧 | chenyuleye</title>
 <meta name="description" content="往往都是0-1比较难走，当到1之后就会越来越顺">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://www.chenyuleye.com/favicon.ico?v=1597831796772">
+<link rel="shortcut icon" href="https://www.chenyuleye.com/favicon.ico?v=1597832017028">
 <link rel="stylesheet" href="https://www.chenyuleye.com/styles/main.css">
 
 
@@ -20,124 +17,120 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 
 
   </head>
   <body>
     <div id="app" class="main">
-      <div class="site-header-container">
-  <div class="site-header">
-    <div class="left">
-      <a href="https://www.chenyuleye.com">
-        <img class="avatar" src="https://www.chenyuleye.com/images/avatar.png?v=1597831796772" alt="" width="32px" height="32px">
-      </a>
-      <a href="https://www.chenyuleye.com">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://www.chenyuleye.com">
+        <img src="https://www.chenyuleye.com/images/avatar.png?v=1597832017028" class="site-logo">
         <h1 class="site-title">chenyuleye</h1>
       </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
     </div>
-    <div class="right">
-      <transition name="fade">
-        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
-      </transition>
-    </div>
-  </div>
-</div>
-
-<transition name="fade">
-  <div class="menu-container" style="display: none;" v-show="menuVisible">
-    <div class="menu-list">
+    <div>
       
         
-          <a href="/" class="menu purple-link">
+          <a href="/" class="site-nav">
             首页
           </a>
         
       
         
-          <a href="/archives" class="menu purple-link">
+          <a href="/archives" class="site-nav">
             归档
           </a>
         
       
         
-          <a href="/post/about" class="menu purple-link">
+          <a href="/post/about" class="site-nav">
             关于
           </a>
         
       
         
-          <a href="https://www.chenyuleye.com/post/wo-you-dian-sha" class="menu purple-link">
+          <a href="https://www.chenyuleye.com/post/wo-you-dian-sha" class="site-nav">
             分类
           </a>
         
       
     </div>
   </div>
-</transition>
-
-
-      <div class="content-container">
-        <div class="post-detail">
-          
-            <div class="feature-container" style="background-image: url('https://www.chenyuleye.com/post-images/xin-wu-zao-jiu.jpg')">
-            </div>
-          
-          <h2 class="post-title">新屋造旧</h2>
-          <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2020-08-15</span>
-            
-              <span>
-                <i class="icon-pricetags-outline"></i>
-                
-                  <a href="https://www.chenyuleye.com/tag/Kx1YUqMJw/">
-                    心情
-                    
-                      ，
-                    
-                  </a>
-                
-                  <a href="https://www.chenyuleye.com/tag/nkJhpEfJR/">
-                    工作
-                    
-                  </a>
-                
-              </span>
-            
-          </div>
-          <div class="post-content">
-            <p>为了这个新屋的诞生，昨儿和师傅“讨价还价”老半天时间，没想到他老人家三两下功夫就给我盖好了，掌声在这里👏~厉害厉害😊。现在都习惯了微博、微信甚至电话都很少打，朋友间的联系看朋友圈就好了，反正大家都习惯在朋友圈发东西刷存在感，你也是，我也一样，可能这样简单便捷吧。哪一天来着，我也不知道我做了什么，猛的挖到我师傅的博客，哦豁🙈，刷刷刷挖完他写的所有文章，差点笑岔气，笑完又觉得感慨，虽然变成“年博”😅，至少不像我直接丢，只记得是网易博客😑，其他一片空白。</p>
-<p>还好，伤感也谈不上，就是惋惜了在多年前自己辛辛苦苦码的文字，也许现在看到会觉得幼稚搞笑，但是也是那时候自己的想法吧。我为什么就是想不起来😤！！！就好比曾经的明信片🌈，天晓得我以前每次收到友人从远方寄给我的明信片，看这邮票邮戳，我都开心疯了，比任何礼物都开心！！</p>
-<p>好吧，重启新屋，记载2020换了新工作的自己，除了可爱的家人，工作一直是我的执念，尽我所能给我爱的家人更好的一切。我看我有时间能不能安静的坐在电脑前写点东西出来~💨💨💨</p>
-
-          </div>
-        </div>
-
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
         
-      </div>
-
       
-
-      <div class="site-footer">
-  <div class="slogan">往往都是0-1比较难走，当到1之后就会越来越顺</div>
-  <div class="social-container">
-    
+        
       
-    
+        
       
-    
+        
       
-    
+        
       
-    
-      
-    
+    </div>
+    <div class="site-description">
+      往往都是0-1比较难走，当到1之后就会越来越顺
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
   </div>
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
 </div>
 
 
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">新屋造旧</h2>
+            <div class="post-date">2020-08-15</div>
+            
+              <div class="feature-container" style="background-image: url('https://www.chenyuleye.com/post-images/xin-wu-zao-jiu.jpg')">
+              </div>
+            
+            <div class="post-content">
+              <p>为了这个新屋的诞生，昨儿和师傅“讨价还价”老半天时间，没想到他老人家三两下功夫就给我盖好了，掌声在这里👏~厉害厉害😊。现在都习惯了微博、微信甚至电话都很少打，朋友间的联系看朋友圈就好了，反正大家都习惯在朋友圈发东西刷存在感，你也是，我也一样，可能这样简单便捷吧。哪一天来着，我也不知道我做了什么，猛的挖到我师傅的博客，哦豁🙈，刷刷刷挖完他写的所有文章，差点笑岔气，笑完又觉得感慨，虽然变成“年博”😅，至少不像我直接丢，只记得是网易博客😑，其他一片空白。</p>
+<p>还好，伤感也谈不上，就是惋惜了在多年前自己辛辛苦苦码的文字，也许现在看到会觉得幼稚搞笑，但是也是那时候自己的想法吧。我为什么就是想不起来😤！！！就好比曾经的明信片🌈，天晓得我以前每次收到友人从远方寄给我的明信片，看这邮票邮戳，我都开心疯了，比任何礼物都开心！！</p>
+<p>好吧，重启新屋，记载2020换了新工作的自己，除了可爱的家人，工作一直是我的执念，尽我所能给我爱的家人更好的一切。我看我有时间能不能安静的坐在电脑前写点东西出来~💨💨💨</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://www.chenyuleye.com/tag/Kx1YUqMJw/" class="tag">
+                    心情
+                  </a>
+                
+                  <a href="https://www.chenyuleye.com/tag/nkJhpEfJR/" class="tag">
+                    工作
+                  </a>
+                
+              </div>
+            
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
     </div>
-    <script type="application/javascript">
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
 
 hljs.initHighlightingOnLoad()
 

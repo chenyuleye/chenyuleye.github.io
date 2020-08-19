@@ -1,18 +1,15 @@
-
 <!DOCTYPE html>
 <html>
   <head>
-    
-<meta charset="utf-8" >
+    <meta charset="utf-8" >
 
 <title>心情 | chenyuleye</title>
 <meta name="description" content="往往都是0-1比较难走，当到1之后就会越来越顺">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://www.chenyuleye.com/favicon.ico?v=1597831796772">
+<link rel="shortcut icon" href="https://www.chenyuleye.com/favicon.ico?v=1597832017028">
 <link rel="stylesheet" href="https://www.chenyuleye.com/styles/main.css">
 
 
@@ -20,180 +17,139 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 
 
   </head>
   <body>
     <div id="app" class="main">
-      <div class="site-header-container">
-  <div class="site-header">
-    <div class="left">
-      <a href="https://www.chenyuleye.com">
-        <img class="avatar" src="https://www.chenyuleye.com/images/avatar.png?v=1597831796772" alt="" width="32px" height="32px">
-      </a>
-      <a href="https://www.chenyuleye.com">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://www.chenyuleye.com">
+        <img src="https://www.chenyuleye.com/images/avatar.png?v=1597832017028" class="site-logo">
         <h1 class="site-title">chenyuleye</h1>
       </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
     </div>
-    <div class="right">
-      <transition name="fade">
-        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
-      </transition>
-    </div>
-  </div>
-</div>
-
-<transition name="fade">
-  <div class="menu-container" style="display: none;" v-show="menuVisible">
-    <div class="menu-list">
+    <div>
       
         
-          <a href="/" class="menu purple-link">
+          <a href="/" class="site-nav">
             首页
           </a>
         
       
         
-          <a href="/archives" class="menu purple-link">
+          <a href="/archives" class="site-nav">
             归档
           </a>
         
       
         
-          <a href="/post/about" class="menu purple-link">
+          <a href="/post/about" class="site-nav">
             关于
           </a>
         
       
         
-          <a href="https://www.chenyuleye.com/post/wo-you-dian-sha" class="menu purple-link">
+          <a href="https://www.chenyuleye.com/post/wo-you-dian-sha" class="site-nav">
             分类
           </a>
         
       
     </div>
   </div>
-</transition>
-
-
-      <div class="content-container">
-
-        <div class="current-tag-container">
-          <h2 class="title">
-            <i class="icon icon-pricetags-outline"></i> 心情
-          </h2> 
-        </div>
-
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
         
-<section class="post-item">
-    <div class="content">
-      <a href="https://www.chenyuleye.com/post/ri-chang-zhou-mo/">
-        <h2 class="post-title">日常周末</h2>
-      </a>
-      <div class="post-abstract">
-        <p>现在的工作，没有像老师那会朝九晚五，没有了双休寒暑假，更别提法定节假日了。但比起之前，我喜欢现在的忙碌吧，虽然偶尔也会怀念假期多多的时候🛫🚝🚗🚲🛵。<br>
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      往往都是0-1比较难走，当到1之后就会越来越顺
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <h2 class="current-tag">标签: 心情</h2>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://www.chenyuleye.com/post/ri-chang-zhou-mo/">
+                  <h2 class="post-title">日常周末</h2>
+                </a>
+                <div class="post-date">
+                  2020-08-16
+                </div>
+                <div class="post-abstract">
+                  <p>现在的工作，没有像老师那会朝九晚五，没有了双休寒暑假，更别提法定节假日了。但比起之前，我喜欢现在的忙碌吧，虽然偶尔也会怀念假期多多的时候🛫🚝🚗🚲🛵。<br>
 既然每周只休息一天，通常一天都是排的满满，不想浪费。学习也好，逛街也罢，不变的依旧是7点多醒来的生物钟，想多睡会都睡不着🙄。这周原本Alin和Nancy要来住一晚一起过周末，计划有变，搁浅了，变成宅家。早上通常都看心情在整理家里的卫生，早餐也是看心情，能做三明治就做给家人吃，不想做就教唆家人牛奶喝一喝，饼干吃一吃😌。主要看中午😎。很奇怪，爸爸妈妈还有妹妹都是一等一的美食高手，偏偏到我这，没天赋，纯靠猜，但是也不妨碍我对美食的热爱，爱吃也是热爱美食的表现~嘿，中午准备了土豆黄焖鸡、蒸蟹、杏鲍菇炒腊肉、紫菜蛋汤，听上去很完美吧，过程不晒了，厨房跟炸弹炸过似的不能看，做法也不说了，纯靠感觉，也不尝味道🙃，大概就好，所以太咸太甜太辣太淡都有可能，但是摆盘不能输😁，我怀疑我做菜不是为了吃。看最后呈现的结果就好哈哈😈蟹就不用说了，鲜活清蒸都好吃，我最拿手的估计就蒸海鲜哈哈，黄焖鸡还可以入口，抖音上看的也综合了青椒炒鸡腿的做法。<br>
 <img src="https://www.chenyuleye.com/post-images/1597565412537.jpg" alt="" loading="lazy"></p>
 
-      </div>
-      <div class="post-info">
-        <span><i class="icon icon-calendar-outline"></i> 2020-08-16</span>
-        
-          <span>
-            <i class="icon icon-pricetags-outline"></i>
-            
-              <a href="https://www.chenyuleye.com/tag/RJYyy9ovP/">
-                美食
-                
-                  ，
-                
-              </a>
-            
-              <a href="https://www.chenyuleye.com/tag/Kx1YUqMJw/">
-                心情
-                
-              </a>
-            
-          </span>
-        
-      </div>
-    </div>
-    
-      <a href="https://www.chenyuleye.com/post/ri-chang-zhou-mo/">
-        <div class="feature-container" style="background-image: url('https://www.chenyuleye.com/post-images/ri-chang-zhou-mo.jpg')">
-        </div>
-      </a>
-    
-  </section>
+                </div>
+              </div>
+              
+                <a class="right" href="https://www.chenyuleye.com/post/ri-chang-zhou-mo/">
+                  <div class="feature-container" style="background-image: url('https://www.chenyuleye.com/post-images/ri-chang-zhou-mo.jpg')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://www.chenyuleye.com/post/xin-wu-zao-jiu/">
+                  <h2 class="post-title">新屋造旧</h2>
+                </a>
+                <div class="post-date">
+                  2020-08-15
+                </div>
+                <div class="post-abstract">
+                  
+                </div>
+              </div>
+              
+                <a class="right" href="https://www.chenyuleye.com/post/xin-wu-zao-jiu/">
+                  <div class="feature-container" style="background-image: url('https://www.chenyuleye.com/post-images/xin-wu-zao-jiu.jpg')">
+                  </div>
+                </a>
+              
+            </article>
+          
 
-<section class="post-item">
-    <div class="content">
-      <a href="https://www.chenyuleye.com/post/xin-wu-zao-jiu/">
-        <h2 class="post-title">新屋造旧</h2>
-      </a>
-      <div class="post-abstract">
-        
-      </div>
-      <div class="post-info">
-        <span><i class="icon icon-calendar-outline"></i> 2020-08-15</span>
-        
-          <span>
-            <i class="icon icon-pricetags-outline"></i>
-            
-              <a href="https://www.chenyuleye.com/tag/Kx1YUqMJw/">
-                心情
-                
-                  ，
-                
-              </a>
-            
-              <a href="https://www.chenyuleye.com/tag/nkJhpEfJR/">
-                工作
-                
-              </a>
-            
-          </span>
-        
-      </div>
-    </div>
-    
-      <a href="https://www.chenyuleye.com/post/xin-wu-zao-jiu/">
-        <div class="feature-container" style="background-image: url('https://www.chenyuleye.com/post-images/xin-wu-zao-jiu.jpg')">
-        </div>
-      </a>
-    
-  </section>
-
-
-<div class="pagination-container">
+          <div class="pagination-container">
   
   
 </div>
 
-
+        </div>
       </div>
-
-      <div class="site-footer">
-  <div class="slogan">往往都是0-1比较难走，当到1之后就会越来越顺</div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  </div>
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-</div>
-
-
     </div>
-    <script type="application/javascript">
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
 
 hljs.initHighlightingOnLoad()
 
